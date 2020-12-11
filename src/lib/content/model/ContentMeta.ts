@@ -50,6 +50,11 @@ export class ContentMeta extends FragmentMeta {
   hierarchy?: Hierarchy;
 
   /**
+   * Version
+   */
+  version?: number;
+
+  /**
    * Creates a new ContentMeta instance.
    * @param data JSON representation of the ContentMeta model
    */
@@ -95,6 +100,10 @@ export class ContentMeta extends FragmentMeta {
 
     if (this.hierarchy) {
       result.hierarchy = this.hierarchy;
+    }
+
+    if (this.version) {
+      result.version = this.version;
     }
 
     return result;
